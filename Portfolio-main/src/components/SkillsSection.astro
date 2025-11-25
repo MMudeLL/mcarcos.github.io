@@ -1,0 +1,50 @@
+---
+const baseTechs = [
+  "python", "javaScript", "typeScript", "react", "HTML5", "CSS3",
+  "tailwindcss", "next", "git", "supabase", "postgresql"
+];
+---
+
+<section id="skills" class="w-full py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="pt-10 relative overflow-hidden">
+      <h4 class="text-center text-[var(--white-icon)] text-sm mb-8 uppercase tracking-widest">
+        Tecnologías & Herramientas
+      </h4>
+      
+      <div class="relative w-full">
+        {/* Sin degradados laterales para un look más limpio */}
+        
+        <div class="flex animate-scroll hover:animate-paused gap-16 md:gap-24 w-max">
+          {
+            // Repetimos la lista completa 3 veces para el loop infinito
+            [...baseTechs, ...baseTechs, ...baseTechs].map((tech, index) => (
+              <div class="flex items-center justify-center group transition-all duration-300">
+                <img
+                  src={`/svg/${tech}.svg`}
+                  alt={tech}
+                  class="h-12 w-auto object-contain transition-transform group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                  loading="lazy"
+                />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.33%); }
+  }
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+  .hover\:animate-paused:hover {
+    animation-play-state: paused;
+  }
+</style>
