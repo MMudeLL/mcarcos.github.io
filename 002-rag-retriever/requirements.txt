@@ -1,0 +1,7 @@
+langchain
+langchain-openai
+langchain-community
+streamlit
+python-dotenv
+langsmith
+langchain-chroma
