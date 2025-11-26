@@ -21,7 +21,7 @@ const baseTechs = [
             [...baseTechs, ...baseTechs, ...baseTechs].map((tech, index) => (
               <div class="flex items-center justify-center group transition-all duration-300">
                 <img
-                  src={`/svg/${tech}.svg`}
+                  src={`${import.meta.env.BASE_URL}svg/${tech}.svg`}
                   alt={tech}
                   class="h-12 w-auto object-contain transition-transform group-hover:scale-110 opacity-80 group-hover:opacity-100"
                   loading="lazy"
