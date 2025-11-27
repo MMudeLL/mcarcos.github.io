@@ -28,7 +28,7 @@ const skills: Skill[] = [
     category: "Inteligencia Artificial",
     icon: Sparkles,
     items: [
-      { name: "Modelos LLM", description: "Gemini, OpenAI" },
+      { name: "Modelos LLM", description: "Gemini, OpenAI, Claude" },
       { name: "Sistemas RAG", description: "Recuperación Aumentada" },
       { name: "Frameworks IA", description: "LangChain" },
       { name: "Vector DBs", description: "ChromaDB" },
@@ -41,7 +41,7 @@ const skills: Skill[] = [
       { name: "Maquetación", description: "HTML5 & CSS3" },
       { name: "Estilos", description: "TailwindCSS" },
       { name: "CMS", description: "Gestión de Contenidos" },
-      { name: "Despliegue", description: "Vercel & Git" },
+      { name: "Despliegue", description: "Vercel, Render & Git" },
     ],
   },
 ];

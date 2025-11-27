@@ -20,7 +20,7 @@ const projects = [
         title: "RAG Document Explorer",
         desc: "Sube tus PDFs y chatea con ellos usando Inteligencia Artificial.",
         longDesc: "Sistema RAG (Retrieval-Augmented Generation) que permite subir documentos PDF, indexarlos vectorialmente y realizar preguntas sobre su contenido con alta precisión.",
-        tech: ["Python", "RAG", "ChromaDB", "Gemini"],
+        tech: ["Python", "LangChain", "Streamlit", "OpenAI", "ChromaDB"],
         image: "/mcarcos.github.io/rag.png",
         github: "https://github.com/MMudeLL/mcarcos.github.io/tree/main/002-rag-retriever",
         demo: "#",
@@ -31,10 +31,21 @@ const projects = [
         title: "Social Recipes App",
         desc: "Plataforma Full Stack para compartir y descubrir recetas de cocina.",
         longDesc: "Aplicación web completa con autenticación de usuarios, base de datos en tiempo real y diseño responsive. Permite crear, guardar y valorar recetas de la comunidad.",
-        tech: ["React", "Next.js", "TailwindCSS", "Supabase"],
+        tech: ["React", "Next.js", "Python", "FastAPI", "TailwindCSS", "Supabase"],
         image: "/mcarcos.github.io/recipes.png",
-        github: "https://syncook.vercel.app/",
+        github: "#", // Desactivado para este proyecto
         demo: "https://syncook.vercel.app/",
+        color: "#a476ff",
+    },
+    {
+        id: 4,
+        title: "Redaction Improver",
+        desc: "Mejora y traduce textos con IA ajustando tono y dialecto.",
+        longDesc: "Aplicación Full Stack que utiliza Inteligencia Artificial para reescribir textos, ajustar el tono (formal/informal) y adaptarlos a diferentes dialectos o idiomas (Español, Inglés, Catalán, etc.).",
+        tech: ["React", "Next.js", "Python", "FastAPI", "LangChain", "OpenAI"],
+        image: "/mcarcos.github.io/redaction-improver.jpg",
+        github: "https://github.com/MMudeLL/mcarcos.github.io/tree/main/003-redaction-improver",
+        demo: "#",
         color: "#a476ff",
     }
 ];
@@ -317,15 +328,17 @@ const ProjectNodes = () => {
                                     </p>
 
                                     <div className="flex gap-4">
-                                        <a
-                                            href={selectedProject.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-2 px-6 py-3 bg-[#a476ff] text-white rounded-xl font-medium hover:bg-[#8e5ee0] transition-colors"
-                                        >
-                                            <Github size={20} />
-                                            Ver Código
-                                        </a>
+                                        {selectedProject.github !== "#" && (
+                                            <a
+                                                href={selectedProject.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 px-6 py-3 bg-[#a476ff] text-white rounded-xl font-medium hover:bg-[#8e5ee0] transition-colors"
+                                            >
+                                                <Github size={20} />
+                                                Ver Código
+                                            </a>
+                                        )}
                                         {selectedProject.demo !== "#" && (
                                             <a
                                                 href={selectedProject.demo}
