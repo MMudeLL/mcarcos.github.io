@@ -18,8 +18,8 @@ const projects = [
     {
         id: 2,
         title: "RAG Document Explorer",
-        desc: "Sube tus PDFs y chatea con ellos usando Inteligencia Artificial.",
-        longDesc: "Sistema RAG (Retrieval-Augmented Generation) que permite subir documentos PDF, indexarlos vectorialmente y realizar preguntas sobre su contenido con alta precisión.",
+        desc: "Explora una base de conocimiento sobre naturaleza e historia con IA.",
+        longDesc: "Sistema RAG (Retrieval-Augmented Generation) que busca información relevante en una base de datos vectorial pre-cargada para responder preguntas con precisión y contexto.",
         tech: ["Python", "LangChain", "Streamlit", "OpenAI", "ChromaDB"],
         image: "/mcarcos.github.io/rag.png",
         github: "https://github.com/MMudeLL/mcarcos.github.io/tree/main/002-rag-retriever",
