@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Layers, Sparkles, Layout } from "lucide-react";
+import { ChevronDown, Layers, BrainCircuit, Layout } from "lucide-react";
 
 interface SkillItem {
   name: string;
@@ -19,29 +19,29 @@ const skills: Skill[] = [
     icon: Layers,
     items: [
       { name: "Desarrollo Backend", description: "Python & FastAPI" },
-      { name: "Frontend Moderno", description: "React & Next.js" },
-      { name: "Bases de Datos", description: "SQL & NoSQL" },
-      { name: "APIs REST", description: "Diseño y Consumo" },
+      { name: "Frontend Moderno", description: "React, Next.js & Astro" },
+      { name: "Bases de Datos", description: "PostgreSQL, SQL & NoSQL" },
+      { name: "Arquitectura Multi-tenant", description: "APIs y servicios reutilizables entre productos" },
     ],
   },
   {
     category: "Inteligencia Artificial",
-    icon: Sparkles,
+    icon: BrainCircuit,
     items: [
-      { name: "Modelos LLM", description: "Gemini, OpenAI, Claude" },
-      { name: "Sistemas RAG", description: "Recuperación Aumentada" },
+      { name: "Agentes y Orquestación", description: "LangGraph y CrewAI para flujos de decisión" },
+      { name: "Modelos LLM", description: "Gemini, OpenAI, Claude y más." },
       { name: "Frameworks IA", description: "LangChain" },
-      { name: "Vector DBs", description: "ChromaDB" },
+      { name: "Human-in-the-Loop", description: "Revisión y validación de tareas críticas" },
     ],
   },
   {
     category: "Web & CMS",
     icon: Layout,
     items: [
-      { name: "Maquetación", description: "HTML5 & CSS3" },
+      { name: "Integraciones de Pago", description: "Stripe y facturación electrónica (Verifactu)" },
+      { name: "Canales de Comunicación", description: "WhatsApp, Email (Twilio, SendGrid, Meta API)" },
       { name: "Estilos", description: "TailwindCSS" },
-      { name: "CMS", description: "Gestión de Contenidos" },
-      { name: "Despliegue", description: "Vercel, Render & Git" },
+      { name: "Despliegue", description: "Docker, Vercel, Render, Coolify & Git" },
     ],
   },
 ];
