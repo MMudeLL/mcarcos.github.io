@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Github, ExternalLink } from "lucide-react";
+import { X, ExternalLink } from "lucide-react";
 
 // DATOS COMPLETOS DE TUS PROYECTOS
 const projects = [
@@ -350,17 +350,6 @@ const ProjectNodes = () => {
                                     </p>
 
                                     <div className="flex gap-4">
-                                        {selectedProject.github !== "#" && (
-                                            <a
-                                                href={selectedProject.github}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center gap-2 px-6 py-3 bg-[#a476ff] text-white rounded-xl font-medium hover:bg-[#8e5ee0] transition-colors"
-                                            >
-                                                <Github size={20} />
-                                                Ver Código
-                                            </a>
-                                        )}
                                         {selectedProject.demo !== "#" && (
                                             <a
                                                 href={selectedProject.demo}
